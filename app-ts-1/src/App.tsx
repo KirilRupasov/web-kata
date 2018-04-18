@@ -1,6 +1,10 @@
 import * as React from 'react';
 import { Component } from 'react';
 import './App.css';
+import { GetData } from './data';
+import ProductList from './ProductList';
+
+const products = GetData();
 
 class App extends Component {
   render(): JSX.Element {
@@ -13,8 +17,8 @@ class App extends Component {
           To get started change this text and save save to reload.
       </p>
         <div className='products'>
-          ... your code here
-      </div>
+          <ul><ProductList products={products} /></ul>
+        </div>
       </div>);
   }
 }
