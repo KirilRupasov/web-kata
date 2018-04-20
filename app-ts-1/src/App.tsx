@@ -1,6 +1,11 @@
 import * as React from 'react';
 import { Component } from 'react';
 import './App.css';
+import { GetData } from './data';
+import { Product } from './Models/Product';
+import { ProductList } from './ProductList';
+
+const data: Product[] = GetData();
 
 class App extends Component {
   render(): JSX.Element {
@@ -12,9 +17,7 @@ class App extends Component {
         <p className='App-intro'>
           To get started change this text and then save to reload.
         </p>
-        <div className='products'>
-          ... your code here
-        </div>
+        <ProductList products={data}/>
       </div>);
   }
 }
