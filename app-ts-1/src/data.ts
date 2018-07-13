@@ -1,4 +1,3 @@
-
 import { Product } from './Models/Product';
 
 const data = {
